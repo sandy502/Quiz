@@ -1,0 +1,19 @@
+
+
+{% block content %}
+
+
+{% if error %}
+{{ error }}
+
+<br/>
+<br/>
+{% endif %}
+
+<h1>logged out .</h1>
+
+
+<a href = "{% url 'signin' %}">Logout here</a>
+
+
+{% endblock %}

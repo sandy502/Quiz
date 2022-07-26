@@ -1,0 +1,25 @@
+
+
+{% block content %}
+
+
+{% if error %}
+{{ error }}
+
+<br/>
+<br/>
+{% endif %}
+
+<h1>Register!</h1>
+
+<form method ='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value = "Submit">
+</form>
+ 
+<h3>Already Have an Account??</h3>
+<a href = "{% url 'signin' %}">Sign In Here</a>
+
+
+{% endblock %}
